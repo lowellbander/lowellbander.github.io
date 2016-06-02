@@ -4,14 +4,14 @@
 
 var posts = [
     new Post({
-        title: 'self',
-        body: 'self description',
-        photoURL: 'self.jpg'
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
     }),
     new Post({
-        title: 'torn',
-        body: 'torn description',
-        photoURL: 'torn.jpg'
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
     }),
     new Post({
         title: 'carbcat',
