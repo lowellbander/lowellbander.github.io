@@ -6,62 +6,62 @@ var pieces = [
     new Piece({
         title: 'ink',
         body: 'ink description',
-        photoURL: 'ink.jpg'
+        photoURL: 'photos/ink.jpg'
     }),
     new Piece({
         title: 'illustrator',
         body: 'illustrator description',
-        photoURL: 'illustrator.jpg'
+        photoURL: 'photos/illustrator.jpg'
     }),
     new Piece({
         title: 'heros',
         body: 'heros description',
-        photoURL: 'heros.jpg'
+        photoURL: 'photos/heros.jpg'
     }),
     new Piece({
         title: 'charcoal',
         body: 'charcoal description',
-        photoURL: 'charcoal.jpg'
+        photoURL: 'photos/charcoal.jpg'
     }),
     new Piece({
         title: 'carbcat',
         body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        photoURL: 'photos/carbcat.jpg'
     }),
     new Piece({
         title: 'carbcat',
         body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        photoURL: 'photos/carbcat.jpg'
     }),
     new Piece({
         title: 'carbcat',
         body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        photoURL: 'photos/carbcat.jpg'
     }),
     new Piece({
         title: 'carbcat',
         body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        photoURL: 'photos/carbcat.jpg'
     }),
     new Piece({
         title: 'carbcat',
         body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        photoURL: 'photos/carbcat.jpg'
     }),
     new Piece({
         title: 'carbcat',
         body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        photoURL: 'photos/carbcat.jpg'
     }),
     new Piece({
         title: 'carbcat',
         body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        photoURL: 'photos/carbcat.jpg'
     }),
     new Piece({
         title: 'carbcat',
         body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        photoURL: 'photos/carbcat.jpg'
     }),
 ];
 
