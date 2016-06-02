@@ -4,14 +4,32 @@
 
     <head>
         <style>
+            :root {
+                --post-width: 300px;
+            }
+
             img {
-                width: 500px;
+                width: var(--post-width);
+            }
+
+            .post {
+                float: left;
+                border: 1px dashed black;
+                padding: 1%;
+                text-align: center;
+                margin: auto;
+            }
+
+            #title {
+                text-align: center;
             }
         </style>
+        <script src="Posts.js"></script>
+        <script src="Detail.js"></script>
     </head>
 
     <body>
-        <h1>My Static Title</h1>
+        <h1 id="title">My Art Portfolio</h1>
         <div id="content"></div>
         <script src="script.js"></script>
     </body>

@@ -3,20 +3,67 @@
  */
 
 var posts = [
-    {
-        title: 'my first post',
-        body: 'my first body',
-        photoURL: 'portrait.jpg'
-    }, {
-        title: 'my second post',
-        body: 'my second body',
-    }
+    new Post({
+        title: 'self',
+        body: 'self description',
+        photoURL: 'self.jpg'
+    }),
+    new Post({
+        title: 'torn',
+        body: 'torn description',
+        photoURL: 'torn.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Post({
+        title: 'carbcat',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
 ];
 
-document.querySelector('#content').innerHTML +=
-    posts.map(({title, body, photoURL}) =>
-    `<div>
-        <h1>${title}</h1>
-        <p>${body}</p>
-        <img src="${photoURL}" />
-    </div>`).join('');
+var context = document.querySelector('#content');
+posts.forEach(_ => _.draw(context));
