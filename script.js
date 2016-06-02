@@ -2,63 +2,63 @@
  * Created by lowellbander on 6/1/16.
  */
 
-var posts = [
-    new Post({
+var pieces = [
+    new Piece({
+        title: 'carbcat1',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Piece({
+        title: 'carbcat2',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Piece({
+        title: 'carbcat3',
+        body: 'carbcat description',
+        photoURL: 'carbcat.jpg'
+    }),
+    new Piece({
         title: 'carbcat',
         body: 'carbcat description',
         photoURL: 'carbcat.jpg'
     }),
-    new Post({
+    new Piece({
         title: 'carbcat',
         body: 'carbcat description',
         photoURL: 'carbcat.jpg'
     }),
-    new Post({
+    new Piece({
         title: 'carbcat',
         body: 'carbcat description',
         photoURL: 'carbcat.jpg'
     }),
-    new Post({
+    new Piece({
         title: 'carbcat',
         body: 'carbcat description',
         photoURL: 'carbcat.jpg'
     }),
-    new Post({
+    new Piece({
         title: 'carbcat',
         body: 'carbcat description',
         photoURL: 'carbcat.jpg'
     }),
-    new Post({
+    new Piece({
         title: 'carbcat',
         body: 'carbcat description',
         photoURL: 'carbcat.jpg'
     }),
-    new Post({
+    new Piece({
         title: 'carbcat',
         body: 'carbcat description',
         photoURL: 'carbcat.jpg'
     }),
-    new Post({
+    new Piece({
         title: 'carbcat',
         body: 'carbcat description',
         photoURL: 'carbcat.jpg'
     }),
-    new Post({
-        title: 'carbcat',
-        body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
-    }),
-    new Post({
-        title: 'carbcat',
-        body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
-    }),
-    new Post({
-        title: 'carbcat',
-        body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
-    }),
-    new Post({
+    new Piece({
         title: 'carbcat',
         body: 'carbcat description',
         photoURL: 'carbcat.jpg'
@@ -66,4 +66,5 @@ var posts = [
 ];
 
 var context = document.querySelector('#content');
-posts.forEach(_ => _.draw(context));
+var scene = new Scene({pieces: pieces, context: context});
+scene.render();

@@ -1,4 +1,4 @@
-class Post {
+class Piece {
     constructor({title, body, photoURL}) {
         // TODO: validate that arguments aren't undefined
         this.title = title;
@@ -6,13 +6,16 @@ class Post {
         this.photoURL = photoURL;
     }
     
-    draw(context) {
-        context.innerHTML += `
+    render() {
+        const template = `
             <div class="post">
                 <h1>${this.title}</h1>
                 <p>${this.body}</p>
                 <img src=${this.photoURL} />
             </div>
         `;
+        const piece = document.createElement('div');
+        piece.innerHTML = template;
+        return piece;
     }
 }
