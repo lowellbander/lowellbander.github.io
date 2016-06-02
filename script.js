@@ -4,24 +4,24 @@
 
 var pieces = [
     new Piece({
-        title: 'carbcat1',
-        body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        title: 'ink',
+        body: 'ink description',
+        photoURL: 'ink.jpg'
     }),
     new Piece({
-        title: 'carbcat2',
-        body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        title: 'illustrator',
+        body: 'illustrator description',
+        photoURL: 'illustrator.jpg'
     }),
     new Piece({
-        title: 'carbcat3',
-        body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        title: 'heros',
+        body: 'heros description',
+        photoURL: 'heros.jpg'
     }),
     new Piece({
-        title: 'carbcat',
-        body: 'carbcat description',
-        photoURL: 'carbcat.jpg'
+        title: 'charcoal',
+        body: 'charcoal description',
+        photoURL: 'charcoal.jpg'
     }),
     new Piece({
         title: 'carbcat',
