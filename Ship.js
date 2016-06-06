@@ -32,7 +32,7 @@ class Ship extends GameObject {
             x: this.x,
             y: this.y,
             angle: this.angle,
-            speed: this.speed * 1.5,
+            speed: this.speed * 1.5 + 1,
         }));
     }
     
@@ -55,30 +55,15 @@ class Ship extends GameObject {
     draw() {
         this.forward();
         
-        this.context.fillStyle = this.color;
+        Triangle.draw({
+            context: this.context,
+            width: this.width,
+            x: this.x,
+            y: this.y,
+            angle: this.angle,
+            color: this.color,
+        });
 
-        this.context.save();
-        var center = this.center();
-        this.context.translate(center.x, center.y);
-        this.context.rotate(this.angle);
-        
-        // draw ship
-        this.context.beginPath();
-        this.context.moveTo(0, 0);
-        this.context.lineTo(-this.width, -this.width);
-        this.context.lineTo(-this.width, this.width);
-        this.context.lineTo(0, 0);
-        this.context.fill();
-        
-        // draw velocity
-        this.context.moveTo(0, 0);
-        this.context.strokeWidth = 7;
-        this.context.lineTo(this.speed * 10, 0);
-        this.context.stroke();
-
-        this.context.restore();
-        
-        //draw torpedos
         this.torpedos.forEach(_ => _.draw());
     }
 }
