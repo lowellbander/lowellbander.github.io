@@ -61,6 +61,9 @@ step();
 
 document.onkeydown = e => {
     switch (e.code) {
+        case 'Space':
+            ship.fire();
+            break;
         case 'ArrowUp':
             ship.increaseSpeed();
             break;

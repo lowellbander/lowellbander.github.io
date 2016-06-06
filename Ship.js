@@ -2,19 +2,21 @@
  * Created by lowellbander on 6/5/16.
  */
 
-var randomColor = _ => '#'+Math.floor(Math.random()*16777215).toString(16);
-
-class Ship {
+class Ship extends GameObject {
     constructor(context) {
-        this.context = context;
-        this.color = randomColor();
-        this.x = 300;
-        this.y = 300;
-        this.speed = 1;
-        this.angle = 0;
+        super({
+            context: context,
+            x: 300,
+            y: 300,
+            angle: 0,
+            speed: 1,
+            wrap: true,
+        });
         this.width = 20;
         this.height = 40;
         this.turnAmount = 10;
+        
+        this.torpedos = [];
     }
     
     center() {
@@ -24,31 +26,22 @@ class Ship {
         };
     }
     
+    fire() {
+        this.torpedos.push(new Torpedo({
+            context: context,
+            x: this.x,
+            y: this.y,
+            angle: this.angle,
+            speed: this.speed * 1.5,
+        }));
+    }
+    
     increaseSpeed() {
         this.speed += 1;
     }
     
     decreaseSpeed() {
         this.speed -= 1;
-    }
-    
-    forward() {
-        this.y += this.speed * Math.sin(this.angle);
-        this.x += this.speed * Math.cos(this.angle);
-        
-        // wrap
-        if (this.x > this.context.canvas.width) {
-            this.x = 0;
-        }
-        if (this.x < 0) {
-            this.x = this.context.canvas.width;
-        }
-        if (this.y > this.context.canvas.height) {
-            this.y = 0;
-        }
-        if (this.y < 0) {
-            this.y = this.context.canvas.height;
-        }
     }
     
     right() {
@@ -84,5 +77,8 @@ class Ship {
         this.context.stroke();
 
         this.context.restore();
+        
+        //draw torpedos
+        this.torpedos.forEach(_ => _.draw());
     }
 }
