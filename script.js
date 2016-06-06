@@ -38,7 +38,6 @@ class Circle {
 }
 
 var circles = [];
-
 // window.setInterval(_ => {
 //     if (circles.length < 20) {
 //         circles.push(new Circle(context));
@@ -47,3 +46,31 @@ var circles = [];
 //     circles.forEach(_ => _.update());
 //     circles.forEach(_ => _.draw());
 // }, 50);
+// ------------------------------------------------------
+const CANVAS_WIDTH = context.canvas.width;
+const CANVAS_HEIGHT = context.canvas.height;
+
+var ship = new Ship(context);
+function step() {
+    context.fillStyle = 'white';
+    context.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    ship.draw();
+    window.requestAnimationFrame(step);
+}
+step();
+
+document.onkeydown = e => {
+    switch (e.code) {
+        case 'ArrowUp':
+            ship.forward();
+            break;
+        case 'ArrowRight':
+            ship.right();
+            break;
+        case 'ArrowLeft':
+            ship.left();
+            break;
+        default:
+            break;
+    }
+};
