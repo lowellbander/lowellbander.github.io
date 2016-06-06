@@ -62,7 +62,10 @@ step();
 document.onkeydown = e => {
     switch (e.code) {
         case 'ArrowUp':
-            ship.forward();
+            ship.increaseSpeed();
+            break;
+        case 'ArrowDown':
+            ship.decreaseSpeed();
             break;
         case 'ArrowRight':
             ship.right();
