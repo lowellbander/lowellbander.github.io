@@ -4,9 +4,17 @@
 <head>
     <title>Welcome</title>
     <style>
+        body {
+            font-family: monospace;
+        }
         #content {
             position: absolute;
-            font-family: monospace;
+            width: 100%;
+        }
+        #controls {
+            float: right;
+            position: absolute;
+            right: 0;
         }
     </style>
 </head>
@@ -30,8 +38,12 @@
                 <li>sliders to toggle auto pilot configuration</li>
             </ul>
             <li>add toggleable path tracing</li>
+            <li>add more ships</li>
         </ul>
     </ul>
+</div>
+<div id="controls">
+    <p>controls</p>
 </div>
 <canvas id="canvas"></canvas>
 <script src="Triangle.js"></script>

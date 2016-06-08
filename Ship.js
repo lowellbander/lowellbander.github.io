@@ -19,6 +19,23 @@ class Ship extends GameObject {
         this.torpedos = [];
         
         this.doAutopilot();
+        this.drawControls();
+    }
+    
+    drawControls() {
+        var controlBox = document.getElementById('controls');
+        var label = document.createElement('label');
+        label.innerHTML = 'speed';
+        label.setAttribute('for', 'speed');
+        controlBox.appendChild(label);
+        var slider = document.createElement('input');
+        slider.setAttribute('type', 'range');
+        slider.setAttribute('id', 'speed');
+        slider.setAttribute('min', 0);
+        slider.setAttribute('max', 10);
+        slider.setAttribute('value', this.speed);
+        slider.oninput = e => this.speed = e.target.value;
+        controlBox.appendChild(slider);
     }
     
     center() {
