@@ -13,9 +13,12 @@ class Ship extends GameObject {
             wrap: true,
         });
         this.width = 20;
-        this.height = 40;
         this.turnAmount = 10;
         
+        this.fireChance = 0.5;
+        this.turnInterval = 500;
+        
+        this.torpedoSize = 7;
         this.torpedos = [];
         
         this.doAutopilot();
@@ -24,25 +27,49 @@ class Ship extends GameObject {
     
     drawControls() {
         var controlBox = document.getElementById('controls');
-        var label = document.createElement('label');
-        label.innerHTML = 'speed';
-        label.setAttribute('for', 'speed');
-        controlBox.appendChild(label);
-        var slider = document.createElement('input');
-        slider.setAttribute('type', 'range');
-        slider.setAttribute('id', 'speed');
-        slider.setAttribute('min', 0);
-        slider.setAttribute('max', 10);
-        slider.setAttribute('value', this.speed);
-        slider.oninput = e => this.speed = e.target.value;
-        controlBox.appendChild(slider);
-    }
-    
-    center() {
-        return {
-            x: this.x + this.width/2,
-            y: this.y + this.height/2
-        };
+        controlBox.appendChild(Scrubber.build({
+            name: 'speed',
+            min: 0,
+            max: 10,
+            onChange: e => this.speed = e.target.value,
+            defaultValue: this.speed,
+        }));
+        controlBox.appendChild(Scrubber.build({
+            name: 'fireChance',
+            min: 0,
+            max: 1,
+            onChange: e => this.fireChance = e.target.value, 
+            defaultValue: this.fireChance,
+            step: 0.1,
+        }));
+        controlBox.appendChild(Scrubber.build({
+            name: 'turnInterval',
+            min: 0,
+            max: 1000,
+            onChange: e => this.turnInterval = e.target.value,
+            defaultValue: this.turnInterval,
+        }));
+        controlBox.appendChild(Scrubber.build({
+            name: 'turnInterval',
+            min: 0,
+            max: 1000,
+            onChange: e => this.turnInterval = e.target.value,
+            defaultValue: this.turnInterval,
+        }));
+        controlBox.appendChild(Scrubber.build({
+            name: 'ship size',
+            min: 1,
+            max: 100,
+            onChange: e => this.width = e.target.value,
+            defaultValue: this.width,
+        }));
+        controlBox.appendChild(Scrubber.build({
+            name: 'torpedo size',
+            min: 1,
+            max: 30,
+            onChange: e => this.torpedoSize = e.target.value,
+            defaultValue: this.torpedoSize,
+        }));
     }
     
     fire() {
@@ -52,6 +79,7 @@ class Ship extends GameObject {
             y: this.y,
             angle: this.angle,
             speed: this.speed * 1.5 + 1,
+            size: this.torpedoSize,
         }));
     }
     
@@ -82,12 +110,12 @@ class Ship extends GameObject {
                 min: -this.turnAmount * scale,
                 max: this.turnAmount * scale
             });
-            window.setTimeout(changeAngle, 500);
+            window.setTimeout(changeAngle, this.turnInterval);
         };
         changeAngle();
         
         var autoFire = () => {
-            if (random({min: 0, max: 1}) < 0.5) {
+            if (random({min: 0, max: 1}) < this.fireChance) {
                 this.fire();
             }
             window.setTimeout(autoFire, 500);
