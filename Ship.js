@@ -17,6 +17,8 @@ class Ship extends GameObject {
         this.turnAmount = 10;
         
         this.torpedos = [];
+        
+        this.doAutopilot();
     }
     
     center() {
@@ -50,6 +52,30 @@ class Ship extends GameObject {
     
     left() {
         this.angle -= this.turnAmount * Math.PI/180;
+    }
+    
+    doAutopilot() {
+        function random({min, max}) {
+            return Math.random() * (max - min) + min;
+        }
+        
+        var changeAngle = () => {
+            var scale = 0.05;
+            this.angle += random({
+                min: -this.turnAmount * scale,
+                max: this.turnAmount * scale
+            });
+            window.setTimeout(changeAngle, 500);
+        };
+        changeAngle();
+        
+        var autoFire = () => {
+            if (random({min: 0, max: 1}) < 0.5) {
+                this.fire();
+            }
+            window.setTimeout(autoFire, 500);
+        };
+        autoFire();
     }
     
     draw() {

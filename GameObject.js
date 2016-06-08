@@ -8,14 +8,14 @@ class GameObject {
         this.x = x;
         this.y = y;
         this.angle = angle;
-        this.color = randomColor();
+        this.color = GameObject.randomColor();
         this.speed = speed;
         this.wrap = wrap
     }
     
     static randomColor() {
         return '#'+Math.floor(Math.random()*16777215).toString(16);  
-    } 
+    }
 
     forward() {
         this.y += this.speed * Math.sin(this.angle);
