@@ -50,13 +50,6 @@ class Ship extends GameObject {
             defaultValue: this.turnInterval,
         }));
         controlBox.appendChild(Scrubber.build({
-            name: 'turnInterval',
-            min: 0,
-            max: 1000,
-            onChange: e => this.turnInterval = e.target.value,
-            defaultValue: this.turnInterval,
-        }));
-        controlBox.appendChild(Scrubber.build({
             name: 'ship size',
             min: 1,
             max: 100,
