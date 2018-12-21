@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/frombelow
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://lowellbander.github.io
+  * I am frombelow (https://keybase.io/frombelow) on keybase.
+  * I have a public key ASDf6BDgMkFSS1ZTTZcCfVszGh7karLQqMTlZXrgRSYOMAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01208e199bc5d2714e5512fc3c3d3945fd9b70f84f78a5c0dccb52e66849c649637a0a",
+      "host": "keybase.io",
+      "kid": "0120dfe810e03241524b56534d97027d5b331a1ee46ab2d0a8c4e5657ae045260e300a",
+      "uid": "9122f81b1e418380a8a15bbbebc79719",
+      "username": "frombelow"
+    },
+    "merkle_root": {
+      "ctime": 1545364910,
+      "hash": "9c84658997f08d41652492222ca467d39b6c754c415b661848778f5898c0bcc84f4fbf57b36d25996507ceb37359d7bda855736a79f1e233b314a04434c17ca5",
+      "hash_meta": "c67850e2174e868ee80694fe6bd74d56c0f81c36dfb9a6e2707a4bf8b42d4344",
+      "seqno": 4178749
+    },
+    "service": {
+      "entropy": "AaNGaUKOGSgj4P4qJO703ujo",
+      "hostname": "lowellbander.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.13.0"
+  },
+  "ctime": 1545364923,
+  "expire_in": 504576000,
+  "prev": "eefb448965f9377612cfa2a833a253a823105e10159047fc4a472cc400b7804f",
+  "seqno": 14,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg3+gQ4DJBUktWU02XAn1bMxoe5Gqy0KjE5WV64EUmDjAKp3BheWxvYWTESpcCDsQg7vtEiWX5N3YSz6KoM6JTqCMQXhAVkEf8SkcsxAC3gE/EIJGXAi3OxGmrqpPZUcfKv2WAU6BcVCuWQZa9/W/s7KE3AgHCo3NpZ8RApmHS1uD0YOR7oLmkssQWMGR4ViSfP6WWAPgaIYKEvOePzrFAWnbKBFyZ2EoFrjFB2wMOD3DAXVxYCD89DpTZCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJn1gKPtKF+vsoMHQ1v6+nEEieTdbVJFWHtwjGd8m5njo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/frombelow
+
+==================================================================
